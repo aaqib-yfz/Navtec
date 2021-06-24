@@ -84,7 +84,6 @@ div#sidebar ul li:hover{
     padding: 30px;    
 }
 div#products{
-    border: 1px solid red;
     width: 73%;
     height: 400px;
     float: left;
