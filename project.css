@@ -9,7 +9,6 @@ div#container {
     width: 100px;
     height: 100px;
     float: left;
-    border: 1px solod red;
 }
     div#company{
     float: left;
@@ -49,28 +48,85 @@ div#navbar li{
     font-weight: bold;
     text-align: center;
 }
-div#navbar li:hover{
+div#navbar  li:hover{
     background-color: #76B900;
     width: 100px ;
-}
-div#main{
-    height:100px;
-    width: 100px;
-    border: 1px solid red;
+    cursor: default;
 }
 div#sidebar{
-    border: 1px solid red;
-}
-div#sidebartitle{
-    height: 40px;
     float: left;
-    border:1px solid red;
+    width: 25%;
+    height: 450px;
 }
-div#sidebaritems{
-    position: absolute;
-    margin-top: 200px;
+li#sidebar-title{
+    text-align: center;
+    height: 5px;
+    width: 100px;
+    background-color: #76B900;
+    border-radius: 10px;
+}
+div#sidebar ul li{
+    
+    width: 100px;
+    list-style-type: disc;
+    padding: 30px;
+}
+div#sidebar  li.a:active{
+    background-color:#76B900 ;
+}
+div#sidebar ul li:hover{
+    cursor: default;
+    height: 5px;
+    background-color: #76B900;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;    
+}
+div#products{
     border: 1px solid red;
+    width: 73%;
+    height: 400px;
+    float: left;
 }
-div#sidebaritems li{
-    list-style-type: none;
+div#banner{
+    border: 1px solid tomato;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    height: 100px;
+    background-color:tomato;
+
+}
+
+div#banner h3.Banner-title{
+    letter-spacing: 5px;
+}
+div#banner p.note{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div#banner button.find-more{
+    background-color: #76B900;
+    border: 1px solid #76B900;
+    border-radius: 5px;
+}
+div#cards{
+    margin-top: 30px;
+}
+div.card{
+    text-align: center;
+    /* border: 1px solid red; */
+    margin-left: 200px;
+    width: 250px;
+    height: 300px;
+    float: left;
+    margin-top:  10px;
+    box-shadow:0px 4px 8px 0px hsla(133, 83%, 47%, 0.3);
+}
+div.card:hover{
+    box-shadow:0px 4px 8px 0px hsla(133, 83%, 47%, 0.7);
+}
+div.cardbody span{ 
+    font-weight: bold;
 }
