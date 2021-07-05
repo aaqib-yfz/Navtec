@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles/bootstrap.min.css">
 <link rel="stylesheet" href="styles/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+
 <title>Title</title>
 </head>
 <body>
@@ -15,7 +16,20 @@
 <script src="styles/jquery.slim.min.js"></script>
 <script src="styles/popper.min.js"></script>
 <script src="styles/bootstrap.min.js"></script>
-<div class="container-fluid">
+<style>
+  body:nth-child(2) div.container-fluid:nth-child(5) div:nth-child(1) > div.jumbotron.jumbotron-fluid{
+    background-color: red;
+  }
+  body > div > div > div > div > p:nth-child(5) > a{
+    background-color: chartreuse;
+  }
+   body > div > div > div > div > p:nth-child(6) > a{
+    background-color: royalblue;
+    width: 90px;
+    border-radius: 5px;
+  } 
+</style>  
+<!-- <div class="container-fluid"> -->
   <!-- Start Of Grids -->
   <!-- <div class="row">
     <p class="col-sm-2 col-md-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae neque eum modi voluptatum asperiores minima. Officiis, deserunt, expedita maxime at minus explicabo saepe vitae, a nihil temporibus blanditiis? Incidunt.</p>
@@ -98,11 +112,84 @@
     </tr>
   </tbody>
 </table> -->
-
+<!--
 <h1 class= " display-1   text-center">Images</h1>
 <img class="img-fluid" src="/Navtech-1/images/shahidafridi.jpg" alt="">
 <img class="imag-fluid rounded-circle" src="/Navtech-1//images/shahidafridi.jpg" alt="">
 <img class="img-fluid rounded" src="/Navtech-1//images/shahidafridi.jpg" alt="">
 </div>
+-->
+
+
+<!-- <div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Sales on Playstation</h1>
+    <p class="lead">playstation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et saepe consequuntur molestiae, fuga accusantium laudantium laborum tempore veniam veritatis cupiditate vero pariatur minus similique dolor doloremque quo! Harum, quisquam quibusdam!</p>
+    <hr class="my-2">
+    <p>More info</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Go!</a>
+    </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Go 2!</a>
+    </p>
+  </div>
+</div>
+</div>  -->
+<!--             *************A L E R T S**********                -->
+
+<!-- <div class="alert alert-primary" role="alert">
+  <strong>primary</strong>
+</div>
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <strong>Saleee!</strong> 
+  <p class="lead">
+      adhsajfsajf
+  </p> 
+</div> -->
+
+<!--     ***B U T T O N S*** -->
+<!-- <h1 class="display-3 text-center">Buttons</h1> -->
+<!-- <form action="save.php" id="f1" name="f1" >
+  <input type="text" placeholder="name">
+  <input type="text" placeholder="Email">
+  <button class=" btn btn-outline-info " type="submit" name="submit">GO</button>
+</form> -->
+
+<!--   P A G I N A T I O N     -->
+<h1 class="display-4 text-center text-uppercase">pagination</h1>
+<ul class="pagination">
+  <li class="page-items">
+    <li>
+      <a href=# class="page-link">&laquo;</a>
+    </li>
+  
+    <li>
+      <a href=# class="page-link">1</a>
+    </li>
+  
+    <li class="page-item">
+      <a href=# class="page-link">2</a>
+    </li>
+  
+    <li class="page-item">
+      <a href=# class="page-link">3</a>
+    </li>
+  
+    <li class=" page-item active">
+      <a href=# class="page-link">4</a>
+    </li>
+  
+  <li>
+    <a href=# class="page-link">&raquo;</a>
+  </li>
+</li>   
+</ul>
+
 </body>
 </html>
