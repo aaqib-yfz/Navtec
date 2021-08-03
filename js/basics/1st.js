@@ -39,6 +39,7 @@ var students = [
             cpp: 54,
             java: 41,
         },
+        sentence : " is sentence 1.",
     },
 
     {
@@ -50,7 +51,14 @@ var students = [
             cpp: 70,
             java: 90,
         },
+        sentence : "This is sentence 3.",
     },
 ];
 
-console.log(students[1].subjects.java);
+// console.log(students[1].subjects.java);
+// for(var i= 0; i<data.length; i++){
+//     switch
+// }
+
+var str="this is a string";
+console.log(str.slice(0,4));

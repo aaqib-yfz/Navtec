@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var books =[
+            {
+                name: "Physics",
+                edition: "3rd",
+                publisher:"Urdu Bazar",
+                editor: "Gulfam",
+                price: 2000,
+            },
+                
+            {
+                name: "Chemistry",
+                edition: "6th",
+                publisher:"Kp Texbooks",
+                editor: "aaqib",
+                price: 3000,
+            },
+
+            {
+                name: "Maths",
+                edition: "2nd",
+                publisher:"islamia  Publishers",
+                editor: "sadiq",
+                price: 2000,
+
+            },
+
+            {
+                name: "English",
+                edition: "7th",
+                publisher:"Board Bazar",
+                editor: "Tayyab",
+                price: 2000,
+
+            },
+        ]
+        var totalPrice =0;
+        var x;
+        for(x in books){
+            document.write(books[x].price+"<br>");
+            totalPrice+= books[x].price;
+            
+        }
+        document.write("Total Price = "+ totalPrice + "<br>");
+        
+        var discount5 = (totalPrice/100)*5;
+        var discount10= (totalPrice/100)*10;
+
+        if(totalPrice <=5000){
+            document.write("Discount = " + discount5);
+        }
+        else if(totalPrice >5000 && totalPrice <=10000){
+            document.write("Discount = " + discount10);
+        }
+        else{
+            document.write("NO DISCOUNT")
+        }
+
+        
+
+    </script>
+</body>
+</html>
