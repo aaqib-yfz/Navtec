@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <script src="/Navtech-1/js/jquery-3.6.0.min.map"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").click(function(){
+                    // alert(this.id);
+                    // console.log(this.id);
+                    for(let c = 0;c<aircrafts_arr.length;c++)
+                    {
+                        if(aircrafts_arr[c].name == this.id)
+                        {
+                            let s1 = `<b>Aircraft Details</b><br>
+                                    ====================<br>
+                                    Aircraft Name: <b>${aircrafts_arr[c].name}</b><br>
+                                    Aircraft Type: <b>${aircrafts_arr[c].type}</b><br>
+                                    Status: <b>${aircrafts_arr[c].status}</b><br>
+                                    Fuel: <b>${aircrafts_arr[c].fuel}</b><br>
+                                    Last Flight: <b>${aircrafts_arr[c].last_flight}</b>`;
+
+                                    // $("#details").html(s1);
+                                    document.getElementById("detail").innerHTML = s1;
+                        }
+                    }
+                });
+                $("td").click(function(){
+                    $("td").css("background-color", "white");
+                    $(this).css("background-color", "lightblue");
+
+                });
+
+        }); 
+        </script>
+
+        <style>
+            .myDiv {
+                border: 1px outset red;
+                background-color: lightblue;
+                width: 50%;
+            }
+            .icon {
+                width: 100px;
+                height: 100px;
+            }
+            .divDetails {
+                position: fixed;
+                top: 120;
+                right: 100;
+                border: 1px outset red;
+                background-color: lightblue;
+                width: 200px;
+                height: 250px;
+                padding-left: 20px;
+
+            }
+
+            #tbl {
+                width: 30%;
+                text-align: center;
+                column-gap: 10px;
+                font-size: 12;
+            }
+        </style>
+
+    </head>
+<body>
+    <script>
+        // Setup the aircraft objects (Global variables)
+        class Aircraft{
+            constructor(name,type,status,fuel,last_flight)
+            {
+                this.name = name,
+                this.type = type,
+                this.status = status,
+                this.fuel = fuel,
+                this.last_flight = last_flight
+            }
+            takeOff = function(){
+                this.status = "InAir";
+            }
+            land = function(){
+                this.status = "OnGround";
+            }
+        }
+
+        aircrafts_arr = [
+            new Aircraft("AC-1", "Trainer", "OnGround", 1200,"4-July-2021"),
+            new Aircraft("AC-2", "Trainer", "InAir", 2300,"4-July-2021"),
+            new Aircraft("AC-3", "Fighter", "OnGround", 1100,"4-July-2021"),
+            new Aircraft("AC-4", "Fighter", "OnGround", 600,"4-July-2021"),
+            new Aircraft("AC-5", "Trainer", "InAir", 200,"4-July-2021"),
+            new Aircraft("AC-6", "Carrier", "OnGround", 2200,"4-July-2021"),
+            new Aircraft("AC-7", "Helicopter", "OnGround", 1000,"4-July-2021"),
+            new Aircraft("AC-8", "Private", "TuneUp", 900,"4-July-2021"),
+            new Aircraft("AC-9", "Fighter", "OnGround", 970,"4-July-2021"),
+            new Aircraft("AC-10", "Fighter", "InAir", 2900,"4-July-2021"),
+            new Aircraft("AC-11", "Fighter", "TuneUp", 1900,"4-July-2021"),
+            new Aircraft("AC-12", "Private", "OnGround", 2200,"4-July-2021"),
+            new Aircraft("AC-13", "Private", "TuneUp", 700,"4-July-2021"),
+
+        ];
+    </script>
+    <h1 align = "center">Aircraft Managment</h1>
+    <h3 align = "center" id = "AC_Count">Aircraft : <script>document.write(aircrafts_arr.length)</script></h3>
+
+    <div id = "myDiv">
+        <table id = "tbl" border="1px" align="center">
+            <script>
+                var cols = 5;
+                var idx = 0;
+                var rows = Math.ceil(aircrafts_arr.length / cols);
+
+                for(let r=0;r<rows;r++)
+                {
+                    document.write("<tr>");
+                    for(let c=0;c<cols;c++)
+                    {
+                        //Multi-line strings
+                        strTitle = `Name: ${aircrafts_arr[idx].name}
+                            Type: ${aircrafts_arr[idx].type}
+                            Status: ${aircrafts_arr[idx].status}
+                            Fuel: ${aircrafts_arr[idx].fuel}`;
+
+                        str1 = `<td><img class = 'icon' title = '${strTitle}'
+                            id = '${aircrafts_arr[idx].name}' 
+                            src = 'aircrafts/${aircrafts_arr[idx].type}.png'><br>
+                            ${aircrafts_arr[idx].name} </td>`;
+
+                            document.write(str1);
+
+                        // document.write("<td><img class = 'icon' id = '" + aircrafts_arr[idx].name + "' src = 'aircrafts/" + aircrafts_arr[idx].type + ".png'><br>" + aircrafts_arr[idx].name + "</td>")
+                        // console.log(aircrafts_arr[0]);
+                        idx++;
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+    </div>
+
+    <div class="divDetails">
+        <p id="detail" align="left">Aircraft Details</p>
+    </div>
+    
+</body>
+
+</html>
